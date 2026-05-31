@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge" alt="Status">
 </p>
 
-Um simulador de bichinho virtual (Tamagotchi) baseado em texto, desenvolvido para rodar diretamente no terminal. O foco principal deste projeto foi aplicar boas práticas de desenvolvimento, blindagem de código contra erros de usuários (*crashes*) e manutenibilidade estrutural.
+Um simulador de bichinho virtual (Tamagotchi) baseado em texto, desenvolvido para rodar diretamente no terminal. O foco principal deste projeto foi aplicar boas práticas de desenvolvimento, blindagem de código contra erros de usuários (*crashes*) e garantir possível reutilização do código.
 
 ---
 
