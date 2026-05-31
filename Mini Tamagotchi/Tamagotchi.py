@@ -7,9 +7,6 @@ MAX_FOME = 10
 MIN_ENERGIA = 0
 MIN_FOME = 0
 
-
-
-
 def menu():
 
     print("")
