@@ -59,7 +59,7 @@ As variáveis de estado nunca são manipuladas diretamente de forma global pelas
 ## 🧑‍💻 Autor
 
 **Vinicius Müller**
-* 🎓 Acadêmico de Sistemas de Informação (1º Semestre)
+* 🎓 Acadêmico de Sistemas de Informação (1º Semestre, Faculdade Antonio Meneghetti)
 * 🎯 Desenvolvido como projeto de consolidação de lógica, modularização e tratamento de dados.
 
 ---
