@@ -1,5 +1,15 @@
 #Crux Sacra Sit Mihi Lux
 
+# --- CONFIGURAÇÕES GLOBAIS ---
+
+MAX_ENERGIA = 10
+MAX_FOME = 10
+MIN_ENERGIA = 0
+MIN_FOME = 0
+
+
+
+
 def menu():
 
     print("")
@@ -12,43 +22,50 @@ def menu():
     print("5 - Sair")
     print("")
     
-    opcao = int(input("Escolha uma ação: "))
+    opcao = int(input("Escolha uma ação: "))   
 
     return opcao
 
 def alimentar (fome):
 
-    fome -= 2
+    buff_alimentar = 2
 
-    if fome <= 0:
+    fome -= buff_alimentar
 
-        fome = 0
+    if fome <= MIN_FOME:
+
+        fome = MIN_FOME
 
     return fome
 
 def brincar(energia, fome):
 
-    energia -= 2
+    custo_energia_brincar = 2
 
-    if energia <= 0:
+    energia -= custo_energia_brincar
 
-        energia = 0
+    if energia <= MIN_ENERGIA:
 
-    fome += 1
+        energia = MIN_ENERGIA
 
-    if fome >= 10:
+    custo_fome_brincar = 1
 
-        fome = 10
+    fome += custo_fome_brincar
+
+    if fome >= MAX_FOME:
+
+        fome = MAX_FOME
 
     return energia, fome
 
 def descansar(energia):
 
-    energia += 10
+    buff_descansar = 10
+    energia += buff_descansar
 
-    if energia >= 10:
+    if energia >= MAX_ENERGIA:
 
-        energia = 10
+        energia = MAX_ENERGIA
 
     return energia
 
@@ -68,27 +85,35 @@ def main():
 
     while opc != 5:
 
-        opc = menu()
+        try:
+            
+            opc = menu()
 
-        if opc == 1:
-
-            fome = alimentar(fome)
-
-        elif opc == 2:
-
-            energia, fome = brincar(energia, fome)
-
-        elif opc == 3:
-
-            energia = descansar(energia)
-
-        elif opc == 4:
-
-            ver_status(energia, fome)
-
-        elif opc < 1 or opc > 5:
+        except ValueError:
 
             print("Opção inválida, tente novamente")
+
+        else:
+
+            if opc == 1:
+
+                fome = alimentar(fome)
+
+            elif opc == 2:
+
+                energia, fome = brincar(energia, fome)
+
+            elif opc == 3:
+
+                energia = descansar(energia)
+
+            elif opc == 4:
+
+                ver_status(energia, fome)
+
+            elif opc < 1 or opc > 5:
+
+                print("Opção inválida, tente novamente")
 
 
 main()
