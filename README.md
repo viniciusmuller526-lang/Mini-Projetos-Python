@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Python-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Focus-Game%20Design%20%26%20Logic-orange?style=for-the-badge" alt="Focus">
 </p>
 
 Bem-vindo a minha coleção de mini-projetos!
